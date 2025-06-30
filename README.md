@@ -134,12 +134,6 @@ In your terminal, ensure that you are in the root directory of this repo, then r
 ./mvnw clean test -pl exception-handling
 ```
 
-Or to run only the ExceptionExercises tests:
-
-```shell
-./mvnw clean test -pl exception-handling -Dtest=ExceptionExercisesTest
-```
-
 ## :pushpin: Custom Exceptions
 
 Create a custom (checked) exception class called `FilenameException` in the `custom-exceptions/src/main/java/com/cbfacademy` directory.
@@ -179,7 +173,7 @@ In your terminal, ensure that you are in the root directory of this repo, then r
 ./mvnw clean test -pl custom-exceptions
 ```
 
-Or to run only the FileExtension tests:
+Or to only run a specific test, use the `-Dtest=[test name]` flag, e.g.:
 
 ```shell
 ./mvnw clean test -pl custom-exceptions -Dtest=FileExtensionTest
@@ -192,13 +186,6 @@ If you want to experiment with the provided application in the App.java file, yo
 
 ```shell
 ./mvnw -q clean compile exec:java
-```
-```
-
-Or on Windows:
-
-```bat
-mvnw -q clean compile exec:java
 ```
 
 [1]: https://docs.oracle.com/javase/21/docs/api/index.html
