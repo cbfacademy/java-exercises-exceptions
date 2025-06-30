@@ -110,7 +110,7 @@ public class ExceptionExercisesTest {
             "hello",
             "123abc",
             "''",
-            " "
+            "' '"
     })
     void testConvertToIntegerReturnsZeroForInvalidStrings(String input) {
         Integer result = exceptionExercises.convertToInteger(input);
