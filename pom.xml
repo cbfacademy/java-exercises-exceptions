@@ -6,7 +6,7 @@
     <groupId>com.cbfacademy</groupId>
     <artifactId>java-exceptions</artifactId>
     <version>1.0.0</version>
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
 
     <name>java-exceptions</name>
     <url>https://codingblackfemales.com/academy</url>
@@ -76,14 +76,12 @@
                         <statelessTestsetInfoReporter implementation="org.apache.maven.plugin.surefire.extensions.junit5.JUnit5StatelessTestsetInfoTreeReporterUnicode"/>
                     </configuration>
                 </plugin>
-                <plugin>
-                    <groupId>org.codehaus.mojo</groupId>
-                    <artifactId>exec-maven-plugin</artifactId>
-                    <configuration>
-                        <mainClass>com.cbfacademy.App</mainClass>
-                    </configuration>
-                </plugin>
             </plugins>
         </pluginManagement>
     </build>
+
+    <modules>
+        <module>exception-handling</module>
+        <module>custom-exceptions</module>
+    </modules>
 </project>
