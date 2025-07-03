@@ -15,15 +15,12 @@ public class ExceptionExercises {
      * @param denominator the denominator
      * @return the result of division, null if denominator is 0 or either parameter is null
      */
-    public Double divide(Double numerator, Double denominator) {
+    public Integer divide(Integer numerator, Integer denominator) {
         if (numerator == null || denominator == null) {
             return null;
         }
         
         try {
-            if (denominator == 0.0) {
-                throw new ArithmeticException("Division by zero");
-            }
             return numerator / denominator;
         } catch (ArithmeticException e) {
             return null;
