@@ -26,29 +26,29 @@ public class ExceptionExercisesTest {
     @ParameterizedTest
     @DisplayName(value = "test the divide method returns the expected result for valid inputs")
     @CsvSource({
-            "10.0, 2.0, 5.0",
-            "15.0, 3.0, 5.0",
-            "7.5, 2.5, 3.0",
-            "100.0, 4.0, 25.0",
-            "0.0, 5.0, 0.0"
+            "10, 2, 5",
+            "15, 3, 5",
+            "8, 2, 4",
+            "100, 4, 25",
+            "0, 5, 0"
     })
-    void testDivideMethodReturnsExpectedResult(Double numerator, Double denominator, Double expectedResult) {
-        Double result = exceptionExercises.divide(numerator, denominator);
+    void testDivideMethodReturnsExpectedResult(Integer numerator, Integer denominator, Integer expectedResult) {
+        Integer result = exceptionExercises.divide(numerator, denominator);
         assertEquals(expectedResult, result);
     }
 
     @Test
     @DisplayName(value = "test the divide method returns null when denominator is 0")
     void testDivideMethodReturnsNullForDivisionByZero() {
-        Double result = exceptionExercises.divide(10.0, 0.0);
+        Integer result = exceptionExercises.divide(10, 0);
         assertNull(result);
     }
 
     @Test
     @DisplayName(value = "test the divide method returns null when either parameter is null")
     void testDivideMethodReturnsNullForNullParameters() {
-        assertNull(exceptionExercises.divide(null, 5.0));
-        assertNull(exceptionExercises.divide(10.0, null));
+        assertNull(exceptionExercises.divide(null, 5));
+        assertNull(exceptionExercises.divide(10, null));
         assertNull(exceptionExercises.divide(null, null));
     }
 

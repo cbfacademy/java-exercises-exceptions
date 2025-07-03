@@ -39,11 +39,11 @@ Using the [Java Exception Handling documentation][4] as a guide, implement the m
 Create a method that performs division while handling potential arithmetic exceptions:
 
 ```java
-public Double divide(Double numerator, Double denominator) {
+public Integer divide(Integer numerator, Integer denominator) {
     // TODO: Implement this method to divide the numerator by the denominator
-    // - return the result of the division
-    // - if the denominator is 0, catch the ArithmeticException and return null
     // - if either parameter is null, return null
+    // - catch the ArithmeticException thrown when the denominator is 0 and return null
+    // - return the result of the division
     throw new RuntimeException("Not implemented");
 }
 ```
@@ -111,8 +111,8 @@ public String processData(List<String> data, int index) {
 ExceptionExercises exercises = new ExceptionExercises();
 
 // Safe division
-Double result1 = exercises.divide(10.0, 2.0);    // Returns 5.0
-Double result2 = exercises.divide(10.0, 0.0);    // Returns null (handles ArithmeticException)
+Integer result1 = exercises.divide(10, 2);    // Returns 5
+Integer result2 = exercises.divide(10, 0);    // Returns null (handles ArithmeticException)
 
 // Safe list access
 List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
